@@ -1,0 +1,34 @@
+    /* Global styles for media queries since inline styles can't use them directly */
+    @media (min-width: 768px) {
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .contact-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 767px) {
+      .about-grid, .skills-grid, .services-grid, .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .contact-flex {
+        display: flex;
+        flex-direction: column;
+      }
+    }
