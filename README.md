@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Century24 Estates
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Century24 Estates is a premier real estate development company based in Zambia, specializing in ultramodern smart homes and integrated living experiences. This website serves as a digital showcase of our brand, projects, and services, built with performance, elegance, and interactivity in mind.
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+### 🧭 Global Layout
+- **Header**: Sticky navigation bar with smooth scroll and theme toggle
+- **Hero Section**: Full-screen intro with animated text and call-to-action
+- **About Section**: Brand story with responsive layout and subtle motion
+- **Services Section**: Grid of offerings with icons and hover animations
+- **Projects Section**: Showcase of real estate developments with image overlays and reveal effects
+- **Testimonials Carousel**: Animated, swipeable client feedback with branded styling
+- **Contact Form**: Netlify-powered form with toast notifications and email integration
+- **Footer**: Social links, copyright, and quick navigation
 
-### `npm start`
+### 🎨 Design & UX
+- Responsive across all devices
+- Theme-aware styling (light/dark mode)
+- Emotion CSS-in-JS for scoped, dynamic styles
+- Framer Motion for smooth transitions and interactive elements
+- Branded toast notifications for form feedback
+- Accessible color contrast and keyboard navigation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ⚙️ Tech Stack
+- React (modular component architecture)
+- Emotion CSS
+- Framer Motion
+- Netlify (hosting + form handling)
+- Expo (mobile preview and testing)
+- DNS & SSL configured for secure access
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install
+npm start

@@ -4,11 +4,12 @@ import { motion } from 'framer-motion';
 import { spacing, breakpoints} from '../constants/theme';
 
 const services = [
-  { icon: '🏠', title: 'Property Development' },
-  { icon: '📐', title: 'Land Acquisition & Planning' },
-  { icon: '🔧', title: 'Project Management' },
-  { icon: '🔧', title: 'Building Construction' },
+  { icon: '🏗️', title: 'Property Development' },         
+  { icon: '🗺️', title: 'Land Acquisition & Planning' },  
+  { icon: '📋', title: 'Project Management' },          
+  { icon: '🧱', title: 'Building Construction' },    
 ];
+
 
 const Services = () => {
   const theme = useTheme(); 
