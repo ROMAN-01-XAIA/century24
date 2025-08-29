@@ -8,9 +8,9 @@ const Footer = () => {
     <footer css={footer}>
       <p>© {year} Century24 Estates. All rights reserved.</p>
       <div css={social}>
-        <a href="https://facebook.com/mukukamumbi" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://tiktok.com/mukukamumbi" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="https://instagram.com/davidmumbi180" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://facebook.com/dione.mumbi" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://tiktok.com/@mukukamumbi" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://instagram.com/mukuka_mumbi_1 " target="_blank" rel="noopener noreferrer">Instagram</a>
       </div>
     </footer>
   );

@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from '@emotion/react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { spacing, breakpoints } from '../constants/theme';
 
@@ -49,35 +50,50 @@ const Projects = () => {
       <h2 css={heading}>Featured Projects</h2>
       <div css={grid(visibleCount)}>
         {getVisibleProjects().map((project, i) => (
-          <div key={i} css={card(theme)}>
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={project.image}
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-                css={image}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8 }}
-              />
-            </AnimatePresence>
-            <AnimatePresence mode="wait">
-              <motion.h3
-                key={project.title}
-                css={title(theme)}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                {project.title}
-              </motion.h3>
-            </AnimatePresence>
-          </div>
+          <Link to="/projects">
+            <div key={i} css={card(theme)}>
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={project.image}
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  css={image}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                />
+              </AnimatePresence>
+              <AnimatePresence mode="wait">
+                <motion.h3
+                  key={project.title}
+                  css={title(theme)}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {project.title}
+                </motion.h3>
+              </AnimatePresence>
+            </div>
+          </Link>
         ))}
       </div>
+
+      <div css={buttonWrapper}>
+        <Link to="/projects" css={linkStyle}>
+          <motion.button
+            css={seeAllButton}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            See All Projects →
+          </motion.button>
+        </Link>
+      </div>
+
     </section>
   );
 };
@@ -149,5 +165,37 @@ const title = theme => css`
   max-width: 220px;
   border-radius: 10px;
 `;
+
+const buttonWrapper = css`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: ${spacing.lg};
+`;
+
+const linkStyle = css`
+  text-decoration: none;
+`;
+
+const seeAllButton = css`
+  background: #03cbda;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: #029bb0;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(3, 203, 218, 0.4);
+  }
+`;
+
 
 export default Projects;

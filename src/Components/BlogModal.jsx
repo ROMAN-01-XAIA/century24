@@ -2,9 +2,11 @@
 import { css, useTheme } from '@emotion/react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 const BlogModal = ({ post, onClose }) => {
   const theme = useTheme();
   if (!post) return null;
+
 
   return (
     <AnimatePresence>

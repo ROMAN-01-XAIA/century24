@@ -2,7 +2,7 @@
 import { css } from '@emotion/react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Toast from './Toast';
+import Toast from '../Components/Toast';
 
 const Contact = () => {
   const [toast, setToast] = useState(null);
