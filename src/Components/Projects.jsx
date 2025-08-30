@@ -33,7 +33,7 @@ const Projects = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex(prev => (prev + visibleCount) % projects.length);
-    }, 6000);
+    }, 5000);
     return () => clearInterval(timer);
   }, [visibleCount]);
 
@@ -72,7 +72,7 @@ const Projects = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.4 }}
                 >
                   {project.title}
                 </motion.h3>
@@ -177,23 +177,25 @@ const linkStyle = css`
 `;
 
 const seeAllButton = css`
-  background: #03cbda;
-  color: white;
+  display: inline-block;
+  background: #ffb347;
+  color: #f5f5f5;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
   border: none;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.95rem;
-  border-radius: 6px;
-  cursor: pointer;
+  text-decoration: none;
   transition: background 0.3s ease;
 
   &:hover {
-    background: #029bb0;
+    color: #000;
+    background: #fac879ff;
     text-decoration: underline;
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(3, 203, 218, 0.4);
+    box-shadow: 0 0 0 2px #ffc76b;
   }
 `;
 

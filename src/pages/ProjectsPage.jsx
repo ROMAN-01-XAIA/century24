@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { Helmet } from 'react-helmet';
 import { css, useTheme } from '@emotion/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
@@ -6,6 +7,7 @@ import { spacing, breakpoints } from '../constants/theme';
 import Footer from '../Components/Footer';
 import Contact from './Contact';
 import { Link } from 'react-router-dom';
+
 
 const listings = [
   {
@@ -55,6 +57,15 @@ const ProjectsPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>All Projects | Century24 Estates</title>
+        <meta name="description" content="Browse all real estate projects in Lusaka." />
+        <meta name="keywords" content="Lusaka real estate, Century24 Estates, property listings, Zambia homes" />
+        <meta property="og:title" content="All Projects | Century24 Estates" />
+        <meta property="og:description" content="Explore our latest real estate developments in Lusaka." />
+        <meta property="og:url" content="https://century24.netlify.app/projects" />
+      </Helmet>
+
       <section css={pageWrapper(theme)}>
         <Link to="/" css={backLink}>← Back to Home</Link>
         <h2 className='oswald' css={heading}>All Projects</h2>
@@ -112,6 +123,7 @@ const ImageSwiper = ({ images, title }) => {
               src={images[index]}
               alt={`${title} ${index + 1}`}
               css={image}
+              loading="lazy"
               initial={isMobile() ? { opacity: 0, x: 20 } : false}
               animate={isMobile() ? { opacity: 1, x: 0 } : false}
               exit={isMobile() ? { opacity: 0, x: -20 } : false}
